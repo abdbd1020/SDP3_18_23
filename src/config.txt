@@ -1,0 +1,6 @@
+Button, X: 50, value: Click on me, Y: 50
+Button, value: Click on me too, X: 50, Y: 100, color: cyan
+Text, value: text1, X: 50, Y: 200
+Text, value: text2, X: 50, Y: 250, color: pink, font: Arial
+EditText, value: Edit Text, X: 300, Y: 110, font: Arial
+EditText, value: Edit Text, X: 300, Y: 150, font: Arial, color: pink

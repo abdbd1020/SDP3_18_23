@@ -1,0 +1,8 @@
+<config>
+    <Button X="100" value="Click on me" Y="200" />
+    <Button value="Click on me too" X="100" Y="250" color="cyan" />
+    <Text value="text1" X="300" Y="120" />
+    <Text value="text2" X="300" Y="170" color="pink" font="Arial" />
+    <EditText value="Edit Text 1" X="100" Y="50" font="Arial" />
+    <EditText value="Edit Text 2" X="70" Y="100" color="yellow" font="Arial" />
+</config>
