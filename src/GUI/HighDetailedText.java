@@ -8,16 +8,15 @@ public class HighDetailedText implements UIElement {
     private TextField textField;
 
     // Default values for simplistic design style
-    private String value = "High Detailed Text";
-    private int x = 200;
-    private int y = 150;
+    private String name = "High Detailed Text";
+    private int layoutX = 200;
+    private int layoutY = 150;
 
     public HighDetailedText() {
         textField = new TextField();
-        textField.setText(value);
-        textField.setLayoutX(x);
-        textField.setLayoutY(y);
-        textField.setText(value);
+        textField.setText(name);
+        textField.setLayoutX(layoutX);
+        textField.setLayoutY(layoutY);
         textField.setEditable(false);
         textField.setStyle("-fx-background-color: \n" +
                 "        #090a0c,\n" +
@@ -28,10 +27,10 @@ public class HighDetailedText implements UIElement {
                 "    -fx-background-insets: 0,1,2,0;\n" +
                 "    -fx-text-fill: white;\n" +
                 "    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );\n" +
-                "    -fx-font-family: \"Arial\";\n" +
-                "    -fx-text-fill: linear-gradient(white, #d0d0d0);\n" +
-                "    -fx-font-size: 12px;\n" +
-                "    -fx-padding: 10 20 10 20;");
+                "    -fx-font-family: \"calibri\";\n" +
+                "    -fx-text-fill: linear-gradient(black, #d0d0d0);\n" +
+                "    -fx-font-size: 16px;\n" +
+                "    -fx-padding: 4 3 16 5;");
     }
 
     @Override
@@ -45,13 +44,13 @@ public class HighDetailedText implements UIElement {
     }
 
     @Override
-    public void setXCoordinate(int x) {
-        textField.setLayoutX(x);
+    public void setXCoordinate(int layoutX) {
+        textField.setLayoutX(layoutX);
     }
 
     @Override
-    public void setYCoordinate(int y) {
-        textField.setLayoutY(y);
+    public void setYCoordinate(int layoutY) {
+        textField.setLayoutY(layoutY);
     }
 
     @Override
@@ -72,5 +71,12 @@ public class HighDetailedText implements UIElement {
     @Override
     public void setFont(String font) {
         textField.setFont(Font.font(font));
+    }
+    @Override
+    public void setHeight(Double height) {
+        textField.setPrefHeight(height);
+    }
+    public void setWidth(Double width) {
+        textField.setPrefWidth(width);
     }
 }

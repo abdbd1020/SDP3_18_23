@@ -16,16 +16,16 @@ public class App {
     public static void main(String[] args) {
         Thread thread = new Thread(() -> {
             WindowManager windowManager = new WindowManager();
-            windowManager.execute(args);
+            windowManager.run(args);
         });
-        menu(thread);
+        mainMenu(thread);
     }
 
-    private static void menu(Thread guiThread){
+    private static void mainMenu(Thread guiThread){
         while(true) {
             try {
                 System.out.println("Please write the file path(must be xml or config file) :");
-                System.out.println("example: C:\\Users\\abdma\\IdeaProjects\\solution\\src\\config.xml");
+                System.out.println("example: src/config.txt");
                 Scanner scanner = new Scanner(System.in);
                 String filePath = scanner.nextLine();
 
@@ -33,11 +33,11 @@ public class App {
                 System.out.println("Please select the style");
                 System.out.println("1. Simplistic");
                 System.out.println("2. High Detailed");
-                System.out.print("Input : ");
+
 
                 int styleChoice = scanner.nextInt();
                 if(styleChoice != 1 && styleChoice != 2)
-                    throw new InputMismatchException("Please enter a valid number");
+                    throw new InputMismatchException("Invalid number");
 
 
                 File file = new File(filePath);
@@ -49,10 +49,10 @@ public class App {
 
 
                 if(styleChoice == 1){
-                    ConfigManager.getInstance().setFactory(new SimplisticFactory());
+                    ConfigManager.getInstance().setFactoryType(new SimplisticFactory());
                 }
                 else{
-                    ConfigManager.getInstance().setFactory(new HighDetailedFactory());
+                    ConfigManager.getInstance().setFactoryType(new HighDetailedFactory());
                 }
                 guiThread.start();
 

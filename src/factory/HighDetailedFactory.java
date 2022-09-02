@@ -13,11 +13,11 @@ public class HighDetailedFactory implements AbstractFactory {
 
     @Override
     public UIElement createTextField() {
-        return (UIElement) new HighDetailedText();
+        return  new HighDetailedText();
     }
 
     @Override
     public UIElement createEditText() {
-        return (UIElement) new HighDetailedEditText();
+        return new HighDetailedEditText();
     }
 }

@@ -1,8 +1,13 @@
 <config>
-    <Button X="100" value="Click on me" Y="200" />
-    <Button value="Click on me too" X="100" Y="250" color="cyan" />
-    <Text value="text1" X="300" Y="120" />
-    <Text value="text2" X="300" Y="170" color="pink" font="Arial" />
-    <EditText value="Edit Text 1" X="100" Y="50" font="Arial" />
-    <EditText value="Edit Text 2" X="70" Y="100" color="yellow" font="Arial" />
+    <Button X="100" value=": my button" Y="20" height="50"  />
+    <Button value="my button too too" X="300" Y="50" color="cyan" />
+    <Text value="hello" X="100" Y="100" height="30"/>
+    <Text value="text2" X="20" Y="300" color="red" font="calibri" />
+    <EditText value="enter name" X="100" Y="150" font="calibri" />
+    <EditText value="enter whatever" X="20" Y="400" color="brown" font="Arial" height="50" width="100" />
+    <Text value="hello" X="100" Y="150"  color="blue"/>
 </config>
+
+
+
+

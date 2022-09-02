@@ -1,6 +1,7 @@
-Button, X: 50, value: Click on me, Y: 50
-Button, value: Click on me too, X: 50, Y: 100, color: cyan
-Text, value: text1, X: 50, Y: 200
-Text, value: text2, X: 50, Y: 250, color: pink, font: Arial
-EditText, value: Edit Text, X: 300, Y: 110, font: Arial
-EditText, value: Edit Text, X: 300, Y: 150, font: Arial, color: pink
+Button, X: 100, value: my button, Y: 20, color: blue, height: 20
+Button, value: my button too, X: 50, Y: 300, color: cyan
+Text, value: hello, X: 100, Y: 100, color: grey
+Text, value: world, X: 300, Y: 20, color: pink, font: calibri
+EditText, value: enter name, X: 100, Y: 150, font: calibri
+EditText, value: enter whatever, X: 20, Y: 400, font: Arial, color: brown
+Text, value: world, X: 300, Y: 90, color: pink, font: calibri

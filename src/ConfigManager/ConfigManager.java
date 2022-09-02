@@ -24,10 +24,10 @@ import java.util.ArrayList;
 
 
 public class ConfigManager {
-    private AbstractFactory factory;
-    private static ConfigManager configManager;
     private int itr = 0;
     private final ArrayList<UIElement> uiElements = new ArrayList<>();
+    private AbstractFactory factory;
+    private static ConfigManager configManager;
     private String fileName;
 
     private ConfigManager() {
@@ -41,7 +41,7 @@ public class ConfigManager {
         return configManager;
     }
 
-    public void execute() {
+    public void readFile() {
         File configFile = new File(fileName);
         TextReaderAdapter xmlReader;
 
@@ -54,7 +54,6 @@ public class ConfigManager {
             xmlReader.loadConfig();
         }
 
-
     }
 
     public void addElementBuilder(UIElement uiElement) {
@@ -65,11 +64,13 @@ public class ConfigManager {
         return itr != uiElements.size();
     }
 
-    public Control nextElement() {
+    public Control nextItem() {
         if (itr == uiElements.size())
             return null;
         else {
-            return uiElements.get(itr++).getElement();
+            Control temp= uiElements.get(itr).getElement();
+            itr++;
+            return temp;
         }
     }
 
@@ -77,7 +78,7 @@ public class ConfigManager {
         this.fileName = fileName;
     }
 
-    public void setFactory(AbstractFactory factory) {
+    public void setFactoryType(AbstractFactory factory) {
         this.factory = factory;
     }
 

@@ -8,16 +8,16 @@ import GUI.UIElement;
 public class SimplisticFactory implements AbstractFactory {
     @Override
     public UIElement createButton() {
-        return (UIElement) new SimplisticButton();
+        return  new SimplisticButton();
     }
 
     @Override
     public UIElement createTextField() {
-        return (UIElement) new SimplisticTextField();
+        return  new SimplisticTextField();
     }
 
     @Override
     public UIElement createEditText() {
-        return (UIElement) new SimplisticEditText();
+        return  new SimplisticEditText();
     }
 }

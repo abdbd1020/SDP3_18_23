@@ -7,17 +7,17 @@ import javafx.scene.text.Font;
 public class SimplisticButton implements UIElement {
     private Button button;
 
-    // Default values for simplistic design style
-    private final static String value = "Simple Button";
-    private final static int x = 100;
-    private final static int y = 200;
+
+    private final static String name = "Simplistic Button";
+    private final static int layoutX = 100;
+    private final static int layoutY = 20;
 
     public SimplisticButton() {
         button = new Button();
-        button.setText(value);
-        button.setLayoutX(x);
-        button.setLayoutY(y);
-        button.setText(value);
+        button.setText(name);
+        button.setLayoutX(layoutX);
+        button.setLayoutY(layoutY);
+
     }
 
     @Override
@@ -26,18 +26,18 @@ public class SimplisticButton implements UIElement {
     }
 
     @Override
-    public void setValue(String value) {
-        button.setText(value);
+    public void setValue(String name) {
+        button.setText(name);
     }
 
     @Override
-    public void setXCoordinate(int x) {
-        button.setLayoutX(x);
+    public void setXCoordinate(int layoutX) {
+        button.setLayoutX(layoutX);
     }
 
     @Override
-    public void setYCoordinate(int y) {
-        button.setLayoutY(y);
+    public void setYCoordinate(int layoutY) {
+        button.setLayoutY(layoutY);
     }
 
     @Override
@@ -48,5 +48,12 @@ public class SimplisticButton implements UIElement {
     @Override
     public void setFont(String font) {
         button.setFont(Font.font(font, 10));
+    }
+    @Override
+    public void setHeight(Double height) {
+        button.setPrefHeight(20);
+    }
+    public void setWidth(Double width) {
+        button.setPrefWidth(50);
     }
 }

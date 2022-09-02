@@ -9,4 +9,9 @@ public interface UIElement {
     void setYCoordinate(int y);
     void setColor(String color);
     void setFont(String font);
+
+
+    void setHeight(Double height);
+    void setWidth(Double height);
+
 }

@@ -14,26 +14,24 @@ public class WindowManager extends Application {
     private final static String title = "Roll_18_23_Assignment_3";
 
 
-    private void loadUI(ConfigManager configManager, Pane pane){
-        configManager.execute();
-        while(configManager.hasMoreItems()){
-            Control element = configManager.nextElement();
-            pane.getChildren().add(element);
-        }
-    }
+
 
     @Override
     public void start(Stage stage) throws Exception {
         ConfigManager configManager = ConfigManager.getInstance();
         Pane pane = new Pane();
-        loadUI(configManager, pane);
+        configManager.readFile();
+        while(configManager.hasMoreItems()){
+            Control element = configManager.nextItem();
+            pane.getChildren().add(element);
+        }
         Scene scene=new Scene(pane,windowWidth,windowHeight);
         stage.setTitle(title);
         stage.setScene(scene);
         stage.show();
     }
 
-    public void execute(String[] args){
+    public void run(String[] args){
         launch(args);
     }
 }

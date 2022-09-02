@@ -8,13 +8,13 @@ public class SimplisticEditText implements UIElement {
     private final TextField editText;
 
     // Default values for simplistic design style
-    private int x = 100;
-    private int y = 100;
+    private int layoutX = 300;
+    private int layoutY = 20;
 
     public SimplisticEditText() {
         editText = new TextField();
-        editText.setLayoutX(x);
-        editText.setLayoutY(y);
+        editText.setLayoutX(layoutX);
+        editText.setLayoutY(layoutY);
     }
 
     @Override
@@ -28,13 +28,13 @@ public class SimplisticEditText implements UIElement {
     }
 
     @Override
-    public void setXCoordinate(int x) {
-        editText.setLayoutX(x);
+    public void setXCoordinate(int layoutX) {
+        editText.setLayoutX(layoutX);
     }
 
     @Override
-    public void setYCoordinate(int y) {
-        editText.setLayoutY(y);
+    public void setYCoordinate(int layoutY) {
+        editText.setLayoutY(layoutY);
     }
 
     @Override
@@ -45,5 +45,12 @@ public class SimplisticEditText implements UIElement {
     @Override
     public void setFont(String font) {
         editText.setFont(Font.font(font, 10));
+    }
+    @Override
+    public void setHeight(Double height) {
+        editText.setPrefHeight(20);
+    }
+    public void setWidth(Double width) {
+        editText.setPrefWidth(60);
     }
 }

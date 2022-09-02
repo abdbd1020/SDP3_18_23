@@ -8,22 +8,23 @@ public class HighDetailedEditText implements UIElement {
     private final TextField editText;
 
     // Default values for simplistic design style
-    private int x = 100;
-    private int y = 100;
+    private int layoutX = 250;
+    private int layoutY = 20;
 
     public HighDetailedEditText() {
 
         editText = new TextField();
-        editText.setLayoutX(x);
-        editText.setLayoutY(y);
-        editText.setStyle("-fx-background-color: \n" +
-                "        linear-gradient(#f2f2f2, #d6d6d6),\n" +
-                "        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),\n" +
-                "        linear-gradient(#dddddd 0%, #f6f6f6 50%);\n" +
-                "    -fx-background-radius: 8,7,6;\n" +
-                "    -fx-background-insets: 0,1,2;\n" +
-                "    -fx-text-fill: black;\n" +
-                "    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );");
+        editText.setLayoutX(layoutX);
+        editText.setLayoutY(layoutY);
+        editText.setStyle(
+                "-fx-background-color: \n" +
+                        "        #777700,\n" +
+
+                        "        linear-gradient(#ff00fe, #00f5fc),\n" +
+                        "        linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);\n" +
+                        "    -fx-background-radius: 4,3,1;\n" +
+                        "    -fx-padding: 3 30 3 30;\n" +
+                        "    -fx-font-size: 12px;");
     }
 
     @Override
@@ -32,38 +33,44 @@ public class HighDetailedEditText implements UIElement {
     }
 
     @Override
-    public void setValue(String value) {
-        editText.setText(value);
+    public void setValue(String name) {
+        editText.setText(name);
     }
 
     @Override
-    public void setXCoordinate(int x) {
-        editText.setLayoutX(x);
+    public void setXCoordinate(int layoutX) {
+        editText.setLayoutX(layoutX);
     }
 
     @Override
-    public void setYCoordinate(int y) {
-        editText.setLayoutY(y);
+    public void setYCoordinate(int layoutY) {
+        editText.setLayoutY(layoutY);
     }
 
     @Override
     public void setColor(String color) {
 
 //        editText.setStyle("-fx-background-color: " + color + ";");
-        editText.setStyle("-fx-background-color: \n" +
-                "        " + color + ";\n" +
-                "    -fx-background-radius: 30;\n" +
-                "    -fx-background-insets: 0;\n" +
-                "    -fx-background-radius: 50;\n" +
-                "    -fx-padding: 15 30 15 30;" +
-                "    -fx-text-fill: black;\n" +
-                "    -fx-font-size: 10px;" +
-                "    -fx-border-color:black; -fx-border-width: 1; -fx-border-style: solid; -fx-border-radius: 30;" +
-                "    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );");
+        editText.setStyle(
+                "-fx-background-color: \n" +
+                        color+",\n" +
+                        "        linear-gradient(#ff00fe, #00f5fc),\n" +
+                        "        linear-gradient(#eaf6fd 0%, #d9f0fc 49%, #bee6fd 50%, #a7d9f5 100%);\n" +
+                        "    -fx-background-radius: 4,3,1;\n" +
+                        "    -fx-padding: 3 30 30 30;\n" +
+                        "    -fx-font-size: 16px;");
     }
 
     @Override
     public void setFont(String font) {
         editText.setFont(Font.font(font));
+    }
+
+    @Override
+    public void setHeight(Double height) {
+        editText.setPrefHeight(height);
+    }
+    public void setWidth(Double width) {
+        editText.setPrefWidth(width);
     }
 }
